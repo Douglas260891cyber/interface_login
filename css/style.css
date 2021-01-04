@@ -11,10 +11,10 @@ resetando*/
   align-items: center;
   height: 100vh; /*Sempre definir a largura para centralizar os items*/
 }
-.conteudo-1{
-    display: flex;/*Alinha horizontalmente*/ 
+.conteudo-1 {
+  display: flex; /*Alinha horizontalmente*/
 }
-.conteudo-2{
-    position: absolute;
-    display: none;
+.conteudo-2 {
+  position: absolute;
+  display: none;
 }
