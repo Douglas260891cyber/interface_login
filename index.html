@@ -3,65 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Login</title>
   </head>
   <body>
+
     <!--PRIMEIRA ETAPA-->
     <div class="container"><!--Login de usuario / lado esquerdo-->
       <div class="conteudo-1">
-        <div class="coluna-1">
+        <div class="entrar">
           <h2 classe="titulo">Holá! É bom vê-lo novamente</h2>
           <p class="descricao">Caso já tenha uma conta <br />pode acessa-lá por aqui.</p>
-          <button class="botao">Entrar</button>
+           <button id="botao">Entrar</button>
+        </div>
+        <div class="criar-conta"><!--Registrar nova conta / lado direito-->
+          <h2 class="titulo">Criar conta</h2>
+          <div class="midia-social">
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Google+</a></li>
+              <li><a href="#">Linkedin</a></li>
+              </ul>
+          </div>
+          <p class="descricao">Ou utilize seu email para o cadastro</p>
+          <form class="formulario"> <!--Formulario-->
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Senha">
+            <button class="botao">Inscrever-se</button>
+          </form>
         </div>
       </div>
 
-      <div class="conteudo-2"><!--Registrar nova conta / lado direito-->
-        <h2 class="titulo">Criar Conta</h2>
-        <div class="icones">
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Google+</a></li>
-            <li><a href="#">Linkedin</a></li>
-          </ul>
-        </div>
-        <p class="descricao">Ou utilize seu email para a descricao</p>
-        <form class="formulario"> <!--Formulario-->
-          <input type="text" placeholder="Nome">
-          <input type="email" placeholder="Email">
-          <input type="password" placeholder="Password">
-          <button class="botao">Inscrever-se</button>
-        </form>
-      </div>
-    </div>
-
-    <!--SEGUNDA ETAPA-->
-    <div class="container"><!--Lado direito-->
-      <div class="conteudo-1">
-        <div class="coluna-1">
+      <!-- SEGUNDA COLUNA -->
+      <div class="conteudo-2">
+        <div class="hola-amigo">
           <h2 classe="titulo">Holá, amigo</h2>
           <p class="descricao">Insira seus dados e comece a jornada conosco.</p>
-          <button class="botao">inscrever-se</button>
+          <button class="botao">Inscrever-se</button>
         </div>
-      </div>
-
-      <div class="conteudo-2"><!--Lado esquerdo-->
-        <h2 class="titulo">Criar Conta</h2>
-        <div class="icones">
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Google+</a></li>
-            <li><a href="#">Linkedin</a></li>
-          </ul>
-        </div>
-        <p class="descricao">Ou utilize seu email para a descricao</p>
-        <form class="formulario"> <!--Formulario-->
+        <div class="criar-conta">
+          <h2 class="titulo">Criar Conta</h2>
+          <div class="midia-social">
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Google+</a></li>
+              <li><a href="#">Linkedin</a></li>
+              </ul>
+          </div>
+          <p class="descricao">Ou utilize seu email para a descricao</p>
           <input type="email" placeholder="Email">
           <input type="password" placeholder="Password">
           <a href="#">Esqueceu sua senha?</a>
           <button class="botao">Entrar</button>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
 

@@ -1,0 +1,20 @@
+/*Importante! Sempre resetar o CSS
+resetando*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /*Sempre definir a largura para centralizar os items*/
+}
+.conteudo-1{
+    display: flex;/*Alinha horizontalmente*/ 
+}
+.conteudo-2{
+    position: absolute;
+    display: none;
+}
