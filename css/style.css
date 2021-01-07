@@ -6,15 +6,42 @@ resetando*/
   box-sizing: border-box;
 }
 .container {
+  background: rgb(231, 226, 226);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh; /*Sempre definir a largura para centralizar os items*/
 }
 .conteudo-1 {
-  display: flex; /*Alinha horizontalmente*/
+  background: white;
+  position: absolute;
+  display: flex;
+  border-radius: 8px; /*Alinha horizontalmente*/
+  height: 50%;
+  width: 80%;
+  justify-content: space-between; /*Sempre definir a altura (justify-content) antes, para depois alinhar os elementos*/
+  align-items: center;
 }
 .conteudo-2 {
+  background: white;
   position: absolute;
   display: none;
+  border-radius: 8px;
+  height: 50%;
+  width: 80%;
+  justify-content:space-between;
+  align-items: center;
+}
+.coluna-1{
+  text-align: center;
+}
+.lista-midia,
+li {
+  display: flex;
+  text-decoration: none;
+  padding-right: 9px;
+}
+.formulario {
+  display: flex;
+  flex-direction: column; /*Sempre dar o display: flex antes*/
 }
