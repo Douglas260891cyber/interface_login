@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 /*Importante! Sempre resetar o CSS
 resetando*/
 * {
@@ -5,6 +6,11 @@ resetando*/
   margin: 0;
   box-sizing: border-box;
 }
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
 .container {
   background: rgb(231, 226, 226);
   display: flex;
@@ -12,6 +18,7 @@ resetando*/
   align-items: center;
   height: 100vh; /*Sempre definir a largura para centralizar os items*/
 }
+
 .content {
   background-color: #fff;
   border-radius: 15px;
@@ -21,6 +28,38 @@ resetando*/
   align-items: center;
   position: relative;
 }
+
+/*Definindo a cor em um dos lados (before = pseudoclasse)*/
+.content::before{
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  background-color: aqua;
+}
+
+h2{
+  font-size: 28px;
+  font-weight:bold;
+}
+
+h2, .titulo-primario{
+  color: white;
+}
+
+.titulo-secundario{
+  color:aqua; 
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;  
+}
+
+.descricao-primaria{
+  color: white;
+}
+
 .conteudo-1 {
   display: flex;
 }
@@ -28,20 +67,52 @@ resetando*/
 .conteudo-2 {
    display: none; 
 }
+
+button{
+  border-radius: 15px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 10px;
+  padding: 10px 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.botao-primario{
+  background-color: transparent;
+  border: 1px solid white;
+  margin-top: 8px;
+}
+
+.botao-primario:hover{
+  background-color: white;
+  color: aqua;
+  transition: 0.6s;
+}
+
+.botao-secundario{
+  background-color:aqua;
+  margin-top: 8px;
+}
+
 .coluna-1{
   text-align: center;
   flex: 1 0 auto;
+  z-index: 10; /*Sobrepondo o conteúdo*/
 }
+
 .coluna-2{
   text-align: center;
   flex: 2 0 auto;
 }
+
 .lista-midia,
 li {
   display: flex;
   text-decoration: none;
   padding-right: 9px;
 }
+
 .formulario {
   display: flex;
   flex-direction: column; /*Sempre dar o display: flex antes*/
