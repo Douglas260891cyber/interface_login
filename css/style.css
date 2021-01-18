@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 /*Importante! Sempre resetar o CSS
 resetando*/
 * {
@@ -7,8 +7,8 @@ resetando*/
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'Open Sans', sans-serif;
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -30,7 +30,7 @@ body{
 }
 
 /*Definindo a cor em um dos lados (before = pseudoclasse)*/
-.content::before{
+.content::before {
   content: "";
   position: absolute;
   width: 40%;
@@ -38,26 +38,31 @@ body{
   background-color: aqua;
 }
 
-h2{
+h2 {
   font-size: 28px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
-h2, .titulo-primario{
+h2,
+.titulo-primario {
   color: white;
 }
 
-.titulo-secundario{
-  color:aqua; 
+.titulo-secundario {
+  color: aqua;
 }
 
 p {
   font-size: 14px;
-  font-weight: 400;  
+  font-weight: 400;
 }
 
-.descricao-primaria{
+.descricao-primaria {
   color: white;
+}
+
+.descricao {
+  color: darkgrey;
 }
 
 .conteudo-1 {
@@ -65,10 +70,10 @@ p {
 }
 
 .conteudo-2 {
-   display: none; 
+  display: none;
 }
 
-button{
+button {
   border-radius: 15px;
   text-transform: uppercase;
   color: white;
@@ -78,39 +83,60 @@ button{
   font-weight: bold;
 }
 
-.botao-primario{
+.botao-primario {
   background-color: transparent;
   border: 1px solid white;
   margin-top: 8px;
 }
 
-.botao-primario:hover{
+.botao-primario:hover {
   background-color: white;
   color: aqua;
   transition: 0.6s;
 }
 
-.botao-secundario{
-  background-color:aqua;
+.botao-secundario {
+  background-color: aqua;
   margin-top: 8px;
 }
 
-.coluna-1{
+.coluna-1 {
   text-align: center;
   flex: 1 0 auto;
   z-index: 10; /*Sobrepondo o conteúdo*/
 }
 
-.coluna-2{
-  text-align: center;
+.coluna-2 {
   flex: 2 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.lista-midia,
-li {
+/*Talvez seja necessário tirar a ".coluna-2-B"*/
+.coluna-2-B {
+  flex: 2 0 auto;
   display: flex;
-  text-decoration: none;
-  padding-right: 9px;
+  flex-direction: column;
+  align-items: center;
+}
+.lista-midia {
+  display: flex;
+  list-style-type: none;
+}
+
+.item-social-midia {
+  border: 1px solid darkgray;
+  border-radius: 50%;
+  height: 35px; /*Deixar o circulo "perfeito"*/
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.item-social-midia,
+a {
+  color: darkgray;
 }
 
 .formulario {
