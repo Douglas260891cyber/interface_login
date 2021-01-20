@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /*Sempre definir a largura para centralizar os items*/
+  height: 110vh; /*Sempre definir a largura para centralizar os items*/
 }
 
 .content {
@@ -36,6 +36,8 @@ body {
   width: 40%;
   height: 100%;
   background-color: aqua;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;  
 }
 
 h2 {
@@ -66,11 +68,11 @@ p {
 }
 
 .conteudo-1 {
-  display: flex;
+  display: none;
 }
 
 .conteudo-2 {
-  display: none;
+  display: flex;
 }
 
 button {
@@ -81,6 +83,10 @@ button {
   padding: 10px 50px;
   cursor: pointer;
   font-weight: bold;
+  width: 178px;
+  height: 32px;
+  align-self: center;
+  border: none;
 }
 
 .botao-primario {
@@ -96,8 +102,13 @@ button {
 }
 
 .botao-secundario {
+  background-color: darkgrey;
+  margin-top: 5px;
+}
+
+.botao-secundario:hover {
   background-color: aqua;
-  margin-top: 8px;
+  transition: 0.6s;
 }
 
 .coluna-1 {
@@ -132,14 +143,57 @@ button {
   width: 35px;
   line-height: 35px;
   text-align: center;
+  margin: 10px 0;
+}
+
+/*Pseudo-classe not -> Faz com que o primeiro elemento
+(icone do Facebook) não aplique a margem de 5px, apenas os outros*/
+.item-social-midia:not(:first-child) {
+  margin-left: 5px;
 }
 
 .item-social-midia,
 a {
   color: darkgray;
 }
+.item-social-midia:hover {
+  background-color: aqua;
+  border: none;
+  transition: 0.6s;
+}
+.item-social-midia,
+a :hover {
+  color: white;
+}
 
 .formulario {
   display: flex;
   flex-direction: column; /*Sempre dar o display: flex antes*/
+}
+
+.formulario input {
+  display: inline-block;
+  height: 30px;
+  width: 100%;
+  border: none;
+  background-color: #ecf0f1;
+}
+
+.recuperar-senha{
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.icon {
+  color: darkgrey;
+  padding: 0 5px;
+}
+
+.label-input {
+  background-color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  margin: 5px;
 }

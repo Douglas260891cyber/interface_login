@@ -24,13 +24,22 @@
               <li class="item-social-midia"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
               <li class="item-social-midia"><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
               <li class="item-social-midia"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-              </ul>
+            </ul>
           </div>
           <p class="descricao">Ou utilize seu email para o cadastro</p>
           <form class="formulario"> <!--Formulario-->
-            <input type="text" placeholder="Nome">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Senha">
+            <label class="label-input" for="">
+              <i class="fas fa-user  icon"></i>
+              <input type="text" placeholder="Nome">
+            </label>
+            <label class="label-input" for="">
+              <i class="fas fa-envelope  icon"></i>
+              <input type="email" placeholder="Email">
+            </label>
+            <label class="label-input" for="">
+              <i class="fas fa-lock  icon"></i>
+              <input type="password" placeholder="Senha">
+            </label>           
             <button class="botao-secundario">Inscrever-se</button>
           </form>
         </div>
@@ -54,9 +63,15 @@
           </div>
           <form class="formulario">
              <p class="descricao">Ou utilize seu email para a descricao</p>
-             <input type="email" placeholder="Email">
-             <input type="password" placeholder="Password">
-             <a href="#">Esqueceu sua senha?</a>
+             <label class="label-input" for="">
+              <i class="fas fa-envelope  icon"></i>
+              <input type="email" placeholder="Email">
+            </label>
+            <label class="label-input" for="">
+              <i class="fas fa-lock  icon"></i>
+              <input type="password" placeholder="Senha">
+            </label>     
+             <a class="recuperar-senha" href="#">Esqueceu sua senha?</a>
              <button class="botao-secundario">Entrar</button>
           </form>
         </div>
