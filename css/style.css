@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap");
 /*Importante! Sempre resetar o CSS
 resetando*/
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -12,11 +13,11 @@ body {
 }
 
 .container {
-  background: rgb(231, 226, 226);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 110vh; /*Sempre definir a largura para centralizar os items*/
+  height: 100vh;
+  background-color: #ecf0f1;
 }
 
 .content {
@@ -29,243 +30,355 @@ body {
   position: relative;
 }
 
-/*Definindo a cor em um dos lados (before = pseudoclasse)*/
 .content::before {
   content: "";
   position: absolute;
+  background-color: black;
   width: 40%;
   height: 100%;
-  background-color: aqua;
   border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;  
+  border-bottom-left-radius: 15px;
+
+  left: 0;
 }
 
-h2 {
+.title {
   font-size: 28px;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
-h2,
-.titulo-primario {
-  color: white;
+.title-primary {
+  color: #fff;
 }
 
-.titulo-secundario {
-  color: aqua;
+.title-second {
+  color: black;
 }
 
-p {
+.description {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
+  line-height: 30px;
 }
 
-.descricao-primaria {
-  color: white;
+.description-primary {
+  color: #fff;
 }
 
-.descricao {
-  color: darkgrey;
+.description-second {
+  color: #7f8c8d;
 }
 
-.conteudo-1 {
-  display: flex;
-}
-
-.coluna-1 {
-  text-align: center;
-  flex: 1 0 auto; 
-}
-
-.coluna-2 {
-  flex: 2 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.conteudo-1, .coluna-1, .coluna-2{
-  z-index: 12;
-}
-.conteudo-2 {
-  display: flex;
-  position: absolute;
-}
-.coluna-1-B {
-  text-align: center;
-  flex: 1 0 auto;
-}
-
-/*Talvez seja necessário tirar a ".coluna-2-B"*/
-.coluna-2-B {
-  flex: 2 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.conteudo-2, .coluna-1-B, .coluna-2-B{
-  z-index: 1;
-}
-
-button {
+.btn {
   border-radius: 15px;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   font-size: 10px;
   padding: 10px 50px;
   cursor: pointer;
   font-weight: bold;
-  width: 178px;
-  height: 32px;
+  width: 150px;
   align-self: center;
   border: none;
+  margin-top: 1rem;
 }
 
-.botao-primario {
+.btn-primary {
   background-color: transparent;
-  border: 1px solid white;
-  margin-top: 8px;
+  border: 1px solid #fff;
+  transition: background-color 0.5s;
+  height: 38px;
+  width: 171px;
 }
 
-.botao-primario:hover {
-  background-color: white;
-  color: aqua;
-  transition: 0.6s;
+.btn-primary:hover {
+  background-color: #fff;
+  color: black;
+  height: 43px;
+  width: 176px;
+  transition: 0.3s;
 }
 
-.botao-secundario {
-  background-color: darkgrey;
+.btn-second {
+  background-color: black;
+  border: 1px solid black;
+  transition: background-color 0.5s;
+  height: 38px;
+  width: 171px;
   margin-top: 5px;
 }
 
-.botao-secundario:hover {
-  background-color: aqua;
-  transition: 0.6s;
+.btn-second:hover {
+  background-color: #fff;
+  border: 1px solid black;
+  color: black;
+  height: 43px;
+  width: 176px;
+  transition: 0.3s;
 }
 
-.lista-midia {
+.first-content {
   display: flex;
-  list-style-type: none;
 }
 
-.item-social-midia {
-  border: 1px solid darkgray;
-  border-radius: 50%;
-  height: 35px; /*Deixar o circulo "perfeito"*/
-  width: 35px;
-  line-height: 35px;
+.first-content .second-column {
+  z-index: 11;
+}
+
+.first-column {
   text-align: center;
-  margin: 10px 0;
+  width: 40%;
+  z-index: 10;
+}
+
+.second-column {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media {
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 /*Pseudo-classe not -> Faz com que o primeiro elemento
 (icone do Facebook) não aplique a margem de 5px, apenas os outros*/
-.item-social-midia:not(:first-child) {
-  margin-left: 5px;
+.link-social-media:not(:first-child) {
+  margin-left: 10px;
 }
 
-.item-social-midia,
-a {
-  color: darkgray;
-}
-.item-social-midia:hover {
-  background-color: aqua;
-  border: none;
-  transition: 0.6s;
-}
-.item-social-midia,
-a :hover {
-  color: white;
+.link-social-media .item-social-media {
+  transition: background-color 0.5s;
 }
 
-.formulario {
+.link-social-media:hover .item-social-media {
+  background-color: black;
+  color: #fff;
+  border-color: black;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.list-social-media {
   display: flex;
-  flex-direction: column; /*Sempre dar o display: flex antes*/
+  list-style-type: none;
 }
 
-.formulario input {
-  display: inline-block;
-  height: 30px;
+.item-social-media {
+  border: 1px solid #bdc3c7;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #95a5a6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.form input {
+  height: 45px;
   width: 100%;
   border: none;
   background-color: #ecf0f1;
 }
 
-.recuperar-senha{
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-.icon {
-  color: darkgrey;
-  padding: 0 5px;
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+  -webkit-text-fill-color: #000 !important;
 }
 
 .label-input {
   background-color: #ecf0f1;
   display: flex;
   align-items: center;
-  margin: 5px;
+  margin: 3px;
 }
 
-/*Mudando a ordem dos conteudos*/
-.conteudo-2 .coluna-1-B {
-  order: 1;
+.icon-modify {
+  color: #7f8c8d;
+  padding: 0 5px;
 }
 
-.conteudo-2 .coluna-2-B {
+.second-content {
+  position: absolute;
+  display: flex;
+}
+
+.second-content .first-column {
   order: 2;
+  z-index: -1;
 }
 
-.conteudo-1 .coluna-1 {
+.second-content .second-column {
   order: 1;
+  z-index: -1;
 }
 
-.conteudo-1 .coluna-2 {
-  order: 2;
+.password {
+  color: #34495e;
+  font-size: 14px;
+  margin: 15px 0;
+  text-align: center;
 }
 
-/*Quando o botão for clicado, o conteudo1 e as colunas 1 e 2 irão para a última camada. E as de baixo irã subir*/
-.entrar-js .conteudo-1 .coluna-1{
-  z-index: 1;
-  order: 2;
-}
-.entrar-js .conteudo-1 .coluna-2 {
-  z-index: 1;
-  order: 1;
+.password::first-letter {
+  text-transform: capitalize;
 }
 
-.entrar-js .conteudo-2 .coluna-1-B{
-  z-index: 12;
-  order: 2;
-}
-.entrar-js .conteudo-2 .coluna-2-B {
-  z-index: 12;
-  order: 1;
+.sign-in-js .first-content .first-column {
+  z-index: -1;
 }
 
-.entrar-js .content::before{
-  left: 61%;
+.sign-in-js .second-content .second-column {
+  z-index: 11;
+}
+
+.sign-in-js .second-content .first-column {
+  z-index: 13;
+}
+
+.sign-in-js .content::before {
+  left: 60%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+  animation: slidein 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+
+  z-index: 12;
 }
 
-.inscrever-js .conteudo-1 .coluna-1{
+.sign-up-js .content::before {
+  animation: slideout 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+
   z-index: 12;
-  order: 2;
-}
-.inscrever-js .conteudo-1 .coluna-2 {
-  z-index: 12;
-  order: 1;
 }
 
-.inscrever-js .conteudo-2 .coluna-1-B{
-  z-index: 1;
-  order: 1;
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column {
+  z-index: -1;
 }
-.inscrever-js .conteudo-2 .coluna-2-B {
-  z-index: 1;
-  order: 2;
+
+.sign-up-js .first-content .second-column {
+  z-index: 11;
+}
+
+.sign-up-js .first-content .first-column {
+  z-index: 13;
+}
+
+/* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
+.sign-in-js .first-content .second-column {
+  z-index: -1;
+  position: relative;
+  animation: deslocamentoEsq 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+}
+
+.sign-up-js .second-content .second-column {
+  position: relative;
+  z-index: -1;
+  animation: deslocamentoDir 1.3s; /*MODIFIQUEI DE 3s PARA 1.3s*/
+}
+
+@keyframes deslocamentoEsq {
+  from {
+    left: 0;
+    opacity: 1;
+    z-index: 12;
+  }
+  25% {
+    left: -80;
+    opacity: 0.5;
+    z-index: 12;
+  }
+  50% {
+    left: -100;
+    opacity: 0.8;
+    z-index: ;
+  }
+  to {
+    left: -110px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes deslocamentoDir {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  25% {
+    left: 80;
+    opacity: 0.5;
+  }
+  50% {
+    left: 100;
+    opacity: 0.8;
+  }
+  to {
+    left: 110px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/*Inserindo as animações*/
+@keyframes slidein {
+  /*De onde sai*/
+  from {
+    left: 0;
+    width: 40%;
+  }
+  25% {
+    left: 5%;
+    width: 50%;
+  }
+  50% {
+    left: 25%;
+    width: 60%;
+  }
+  75% {
+    left: 45%;
+    width: 50%;
+  }
+  /*Onde termina*/
+  to {
+    left: 60%;
+    width: 40%;
+  }
+}
+
+@keyframes slideout {
+  /*De onde sai*/
+  from {
+    left: 60%;
+    width: 40%;
+  }
+  25% {
+    left: 45%;
+    width: 50%;
+  }
+  50% {
+    left: 25%;
+    width: 60%;
+  }
+  75% {
+    left: 5%;
+    width: 50%;
+  }
+  /*Onde termina*/
+  to {
+    left: 0%;
+    width: 40%;
+  }
 }

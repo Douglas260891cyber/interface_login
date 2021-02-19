@@ -1,12 +1,14 @@
-let btnEntrar = document.querySelector('#entrar'); 
-let btnInscreverSe = document.querySelector('#inscrever'); 
 
-let body = document.querySelector('body'); 
+var btnSignin = document.querySelector("#signin");
+var btnSignup = document.querySelector("#signup");
 
-btnEntrar.addEventListener('click', function(){
-    body.className = 'entrar-js'; //Ao receber o click, a classe entrar-js será criada. 
-})
+var body = document.querySelector("body");
 
-btnInscreverSe.addEventListener('click', function(){
-    body.className = 'inscrever-js'; 
+
+btnSignin.addEventListener("click", function () {
+    body.className = "sign-in-js";
+});
+
+btnSignup.addEventListener("click", function () {
+    body.className = "sign-up-js";
 })
